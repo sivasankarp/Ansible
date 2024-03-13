@@ -1,4 +1,4 @@
-Install Nginx using Ansible playbook
+# Install Nginx using Ansible playbook
 
 - hosts: stagingwebservers
  gather_facts: False
@@ -19,6 +19,6 @@ Install Nginx using Ansible playbook
 ...
 
 
-In the above playbook, we are fetching all hosts of stagingwebservers group for executing these tasks. The first task is to install Nginx and then configure it. We are also taking a flask server for reference. In the end, we also defined handlers so that in case the state changes it will restart Nginx. After executing the above playbook we can verify whether Nginx is installed or not.
+#In the above playbook, we are fetching all hosts of stagingwebservers group for executing these tasks. The first task is to install Nginx and then configure it. We are also taking a flask server for reference. In the end, we also defined handlers so that in case the state changes it will restart Nginx. After executing the above playbook we can verify whether Nginx is installed or not.
 
-ps waux | grep nginx
+#ps waux | grep nginx
