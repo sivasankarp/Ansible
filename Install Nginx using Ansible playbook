@@ -17,3 +17,8 @@ Install Nginx using Ansible playbook
    - name: restart flask app
      service: name=flask-demo state=restarted
 ...
+
+
+In the above playbook, we are fetching all hosts of stagingwebservers group for executing these tasks. The first task is to install Nginx and then configure it. We are also taking a flask server for reference. In the end, we also defined handlers so that in case the state changes it will restart Nginx. After executing the above playbook we can verify whether Nginx is installed or not.
+
+ps waux | grep nginx
